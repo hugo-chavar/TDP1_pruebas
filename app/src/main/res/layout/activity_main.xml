@@ -16,6 +16,17 @@
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/textView" />
 
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input text" android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
