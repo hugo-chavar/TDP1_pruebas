@@ -86,4 +86,19 @@
         app:layout_constraintTop_toBottomOf="@id/textViewInicioActividad"
         app:layout_constraintLeft_toRightOf="@+id/textViewFinActividad"/>
 
+    <TextView
+        android:id="@+id/textViewPrioridad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prioridad"
+        app:layout_constraintTop_toBottomOf="@id/textViewFinActividad"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewFinActividad" />
+
+    <Spinner
+        android:id="@+id/spinnerPrioridades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewPrioridad"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewPrioridad"/>
+
 </android.support.constraint.ConstraintLayout>
