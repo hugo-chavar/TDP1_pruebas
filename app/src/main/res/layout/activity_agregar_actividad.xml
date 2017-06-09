@@ -52,8 +52,8 @@
         app:layout_constraintTop_toBottomOf="@id/edittextDescripcion"
         app:layout_constraintLeft_toLeftOf="@+id/edittextDescripcion"/>
 
-    <EditText
-        android:id="@+id/editTextInicioActividad"
+    <TextView
+        android:id="@+id/textViewInicioActividad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Input text" android:inputType="date"
@@ -67,15 +67,15 @@
         android:text="Selecionar fecha"
         android:onClick="mostrarDatePicker"
         app:layout_constraintTop_toBottomOf="@id/textInicioActividad"
-        app:layout_constraintLeft_toRightOf="@+id/editTextInicioActividad"/>
+        app:layout_constraintLeft_toRightOf="@+id/textViewInicioActividad"/>
 
-    <EditText
-        android:id="@+id/editTextFinActividad"
+    <TextView
+        android:id="@+id/textViewFinActividad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Input text" android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@id/editTextInicioActividad"
-        app:layout_constraintLeft_toLeftOf="@+id/editTextInicioActividad"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewInicioActividad"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewInicioActividad"/>
 
     <Button
         android:id="@+id/buttonFinActividad"
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:text="Selecionar fecha"
         android:onClick="mostrarDatePicker"
-        app:layout_constraintTop_toBottomOf="@id/editTextInicioActividad"
-        app:layout_constraintLeft_toRightOf="@+id/editTextFinActividad"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewInicioActividad"
+        app:layout_constraintLeft_toRightOf="@+id/textViewFinActividad"/>
 
 </android.support.constraint.ConstraintLayout>
