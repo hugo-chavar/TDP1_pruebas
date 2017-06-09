@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nfc.tdp1_app_prueba.AgregarActividadActivity">
+
+
+    <TextView
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginBottom="475dp"
+        android:layout_marginRight="300dp" />
+
+    <EditText
+        android:id="@+id/edittextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input text" android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/textNombre"
+        app:layout_constraintLeft_toLeftOf="@+id/textNombre"/>
+
+    <TextView
+        android:id="@+id/textDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        app:layout_constraintTop_toBottomOf="@id/edittextNombre"
+        app:layout_constraintLeft_toLeftOf="@+id/edittextNombre" />
+
+    <EditText
+        android:id="@+id/edittextDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input text" android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/textDescripcion"
+        app:layout_constraintLeft_toLeftOf="@+id/textDescripcion"/>
+
+    <TextView
+        android:id="@+id/textInicioActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        app:layout_constraintTop_toBottomOf="@id/edittextDescripcion"
+        app:layout_constraintLeft_toLeftOf="@+id/edittextDescripcion"/>
+
+    <EditText
+        android:id="@+id/editTextInicioActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input text" android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/textInicioActividad"
+        app:layout_constraintLeft_toLeftOf="@+id/textInicioActividad"/>
+
+    <Button
+        android:id="@+id/buttonInicioActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecionar fecha"
+        android:onClick="mostrarDatePicker"
+        app:layout_constraintTop_toBottomOf="@id/textInicioActividad"
+        app:layout_constraintLeft_toRightOf="@+id/editTextInicioActividad"/>
+
+    <EditText
+        android:id="@+id/editTextFinActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input text" android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/editTextInicioActividad"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextInicioActividad"/>
+
+    <Button
+        android:id="@+id/buttonFinActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecionar fecha"
+        android:onClick="mostrarDatePicker"
+        app:layout_constraintTop_toBottomOf="@id/editTextInicioActividad"
+        app:layout_constraintLeft_toRightOf="@+id/editTextFinActividad"/>
+
+</android.support.constraint.ConstraintLayout>
