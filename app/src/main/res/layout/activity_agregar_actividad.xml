@@ -101,4 +101,33 @@
         app:layout_constraintTop_toBottomOf="@id/textViewPrioridad"
         app:layout_constraintLeft_toLeftOf="@+id/textViewPrioridad"/>
 
+    <RadioGroup
+        android:id="@+id/radioGroupPerioridicidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/spinnerPrioridades"
+        app:layout_constraintLeft_toLeftOf="@+id/spinnerPrioridades">
+        <RadioButton
+            android:id="@+id/radioButtonPeriodicidadDiario"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Diario"/>
+        <RadioButton
+            android:id="@+id/radioButtonPeriodicidadSemanal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Semanal"/>
+        <RadioButton
+            android:id="@+id/radioButtonPeriodicidadCadaXDias"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Cada X dias"/>
+    </RadioGroup>
+
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>
