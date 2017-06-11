@@ -125,6 +125,29 @@
             android:text="Cada X dias"/>
     </RadioGroup>
 
+    <CheckBox
+        android:id="@+id/checkBoxTiempoEstimado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupPerioridicidad"
+        app:layout_constraintLeft_toLeftOf="@+id/radioGroupPerioridicidad"
+        android:text="Tiempo estimado:"/>
+    <Spinner
+        android:id="@+id/spinnerObjetivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTiempoEstimado"
+        app:layout_constraintLeft_toLeftOf="@+id/checkBoxTiempoEstimado"/>
+
+    <Button
+        android:id="@+id/buttonAgregarActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar actividad"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerObjetivos"
+        app:layout_constraintLeft_toLeftOf="@+id/spinnerObjetivos" />
+
+
 
 
 
