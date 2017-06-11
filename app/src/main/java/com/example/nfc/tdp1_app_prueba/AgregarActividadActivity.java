@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -40,5 +41,10 @@ public class AgregarActividadActivity extends AppCompatActivity {
         DatePickerFragment datePickerFragment = new DatePickerFragment();
         datePickerFragment.setTextView(textoFecha);
         datePickerFragment.show(getSupportFragmentManager(), "Ingrese una fecha");
+    }
+
+    public void clickTiempoEstimado(View view) {
+        boolean estaCheckeado = ((CheckBox) view).isChecked();
+        findViewById(R.id.editTextTiempoEstimado).setEnabled(estaCheckeado);
     }
 }

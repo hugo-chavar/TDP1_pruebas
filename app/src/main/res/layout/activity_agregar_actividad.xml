@@ -135,7 +135,18 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/radioGroupPerioridicidad"
             app:layout_constraintLeft_toLeftOf="@+id/radioGroupPerioridicidad"
-            android:text="Tiempo estimado:"/>
+            android:text="Tiempo estimado:"
+            android:onClick="clickTiempoEstimado"/>
+
+        <EditText
+            android:id="@+id/editTextTiempoEstimado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="horas:minutos:segundos"
+            app:layout_constraintLeft_toRightOf="@+id/checkBoxTiempoEstimado"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupPerioridicidad"
+            android:enabled="false"/>
+
         <Spinner
             android:id="@+id/spinnerObjetivos"
             android:layout_width="wrap_content"
