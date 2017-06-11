@@ -12,6 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Por ahora cargo los objetivos aca, para probrarlo
+        Perfil.agregarObjetivo(new Objetivo("Obj1"));
+        Perfil.agregarObjetivo(new Objetivo("Obj2"));
+        Perfil.agregarObjetivo(new Objetivo("Obj3"));
+        Perfil.agregarObjetivo(new Objetivo("Obj4"));
     }
 
 
@@ -30,4 +36,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AgregarActividadActivity.class);
         startActivity(intent);
     }
+
+    public void irAVerObjetivos(View view) {
+        Intent intent = new Intent(this, VerObjetivosActivity.class);
+        startActivity(intent);
+    }
+
 }

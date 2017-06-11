@@ -160,7 +160,8 @@
             android:layout_height="wrap_content"
             android:text="Agregar actividad"
             app:layout_constraintTop_toBottomOf="@+id/spinnerObjetivos"
-            app:layout_constraintLeft_toLeftOf="@+id/spinnerObjetivos"/>
+            app:layout_constraintLeft_toLeftOf="@+id/spinnerObjetivos"
+            android:onClick="agregarActividad"/>
 
     </android.support.constraint.ConstraintLayout>
 

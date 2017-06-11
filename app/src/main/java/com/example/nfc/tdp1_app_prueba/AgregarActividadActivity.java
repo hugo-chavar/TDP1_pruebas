@@ -36,12 +36,6 @@ public class AgregarActividadActivity extends AppCompatActivity {
         //No termino de entender para que sirve
         spinnerPrioridades.setPrompt("Como funciona esto, el prompt? no lo veo cuando lo corro");
 
-        //Por ahora cargo los objetivos aca, para probrarlo
-        Perfil.agregarObjetivo(new Objetivo("Obj1"));
-        Perfil.agregarObjetivo(new Objetivo("Obj2"));
-        Perfil.agregarObjetivo(new Objetivo("Obj3"));
-        Perfil.agregarObjetivo(new Objetivo("Obj4"));
-
         Spinner spinnerObjetivos = (Spinner) findViewById(R.id.spinnerObjetivos);
         LinkedList<Objetivo> objetivos = Perfil.getObjetivos();
         ArrayAdapter<Objetivo> adapterObjetivos = new ArrayAdapter<Objetivo>(this, R.layout.support_simple_spinner_dropdown_item, objetivos);
@@ -67,6 +61,9 @@ public class AgregarActividadActivity extends AppCompatActivity {
         Actividad nuevaActividad = new Actividad(  ((EditText)findViewById(R.id.edittextNombre)).getText().toString()   );
         //Se le setea todo lo demas que haya que setearle
 
+        //esto deberia ser solo si se eligio agregarlo a un objetivo
+        Objetivo objetivoSeleccionado =  (Objetivo)((Spinner)findViewById(R.id.spinnerObjetivos)).getSelectedItem();
+        objetivoSeleccionado.agregarActividad(nuevaActividad);
         Perfil.agregarActividad(nuevaActividad);
     }
 }

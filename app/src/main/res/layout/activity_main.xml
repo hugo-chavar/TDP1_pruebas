@@ -41,7 +41,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:onClick="se_clickeo"/>
+        android:onClick="se_clickeo"
+        app:layout_constraintVertical_bias="0.395" />
 
     <Button
         android:id="@+id/agregar_actividad_button"
@@ -56,6 +57,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="100dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:onClick="irAAgregarActividad"/>
+        android:onClick="irAAgregarActividad"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <Button
+        android:id="@+id/ver_objetivos_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Objetivos"
+        android:onClick="irAVerObjetivos"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
