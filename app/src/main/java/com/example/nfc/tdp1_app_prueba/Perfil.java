@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class Perfil {
 
     private static LinkedList<Objetivo> objetivos = new LinkedList<>();
-    private static LinkedList<Actividad> actividades;
+    private static LinkedList<Actividad> actividades = new LinkedList<>();
 
     public static void agregarObjetivo(Objetivo objetivo) {
         Perfil.objetivos.add(objetivo);
@@ -22,4 +22,6 @@ public class Perfil {
     public static void agregarActividad(Actividad nuevaActividad) {
         Perfil.actividades.add(nuevaActividad);
     }
+
+
 }
