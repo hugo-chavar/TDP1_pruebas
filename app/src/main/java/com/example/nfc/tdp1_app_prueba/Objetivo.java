@@ -13,6 +13,7 @@ public class Objetivo {
 
     public Objetivo(String nombre) {
         this.nombre = nombre;
+        this.actividades = new LinkedList<>();
     }
 
     public String getNombre() {
@@ -25,5 +26,24 @@ public class Objetivo {
 
     public String toString() {
         return this.nombre;
+    }
+
+
+    public float getProgreso() {
+        //5 solo para probarlo
+        float actividadesCompletadas = 5;
+        if (this.tieneActividades()) {
+            for (Actividad actividad : this.actividades) {
+                if (actividad.estaCompletada()) {
+                    actividadesCompletadas++;
+                }
+            }
+            return (actividadesCompletadas/this.actividades.size())*100;
+        }
+        return 0;
+    }
+
+    public boolean tieneActividades() {
+        return this.actividades.size() != 0;
     }
 }
