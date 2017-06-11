@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class AgregarActividadActivity extends AppCompatActivity {
@@ -33,6 +34,20 @@ public class AgregarActividadActivity extends AppCompatActivity {
 
         //No termino de entender para que sirve
         spinnerPrioridades.setPrompt("Como funciona esto, el prompt? no lo veo cuando lo corro");
+
+
+
+        //Por ahora cargo los objetivos aca, para probrarlo
+        Perfil.agregarObjetivo(new Objetivo("Obj1"));
+        Perfil.agregarObjetivo(new Objetivo("Obj2"));
+        Perfil.agregarObjetivo(new Objetivo("Obj3"));
+        Perfil.agregarObjetivo(new Objetivo("Obj4"));
+
+        Spinner spinnerObjetivos = (Spinner) findViewById(R.id.spinnerObjetivos);
+        LinkedList<String> objetivos = Perfil.getNombresDeObjetivos();
+        ArrayAdapter<String> adapterObjetivos = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, objetivos);
+        spinnerObjetivos.setAdapter(adapterObjetivos);
+
     }
 
 
