@@ -29,6 +29,9 @@ public class AgregarActividadActivity extends AppCompatActivity {
         Spinner spinnerPrioridades = (Spinner) findViewById(R.id.spinnerPrioridades);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, prioridades);
         spinnerPrioridades.setAdapter(adapter);
+
+        //No termino de entender para que sirve
+        spinnerPrioridades.setPrompt("Como funciona esto, el prompt? no lo veo cuando lo corro");
     }
 
 
