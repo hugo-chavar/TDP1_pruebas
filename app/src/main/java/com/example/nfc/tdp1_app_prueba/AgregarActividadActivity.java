@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -35,8 +36,6 @@ public class AgregarActividadActivity extends AppCompatActivity {
         //No termino de entender para que sirve
         spinnerPrioridades.setPrompt("Como funciona esto, el prompt? no lo veo cuando lo corro");
 
-
-
         //Por ahora cargo los objetivos aca, para probrarlo
         Perfil.agregarObjetivo(new Objetivo("Obj1"));
         Perfil.agregarObjetivo(new Objetivo("Obj2"));
@@ -44,8 +43,8 @@ public class AgregarActividadActivity extends AppCompatActivity {
         Perfil.agregarObjetivo(new Objetivo("Obj4"));
 
         Spinner spinnerObjetivos = (Spinner) findViewById(R.id.spinnerObjetivos);
-        LinkedList<String> objetivos = Perfil.getNombresDeObjetivos();
-        ArrayAdapter<String> adapterObjetivos = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, objetivos);
+        LinkedList<Objetivo> objetivos = Perfil.getObjetivos();
+        ArrayAdapter<Objetivo> adapterObjetivos = new ArrayAdapter<Objetivo>(this, R.layout.support_simple_spinner_dropdown_item, objetivos);
         spinnerObjetivos.setAdapter(adapterObjetivos);
 
     }
@@ -61,5 +60,13 @@ public class AgregarActividadActivity extends AppCompatActivity {
     public void clickTiempoEstimado(View view) {
         boolean estaCheckeado = ((CheckBox) view).isChecked();
         findViewById(R.id.editTextTiempoEstimado).setEnabled(estaCheckeado);
+    }
+
+    public void agregarActividad(View view) {
+
+        Actividad nuevaActividad = new Actividad(  ((EditText)findViewById(R.id.edittextNombre)).getText().toString()   );
+        //Se le setea todo lo demas que haya que setearle
+
+        Perfil.agregarActividad(nuevaActividad);
     }
 }

@@ -9,17 +9,17 @@ import java.util.LinkedList;
 public class Perfil {
 
     private static LinkedList<Objetivo> objetivos = new LinkedList<>();
+    private static LinkedList<Actividad> actividades;
 
     public static void agregarObjetivo(Objetivo objetivo) {
         Perfil.objetivos.add(objetivo);
     }
 
-    public static LinkedList<String> getNombresDeObjetivos() {
-        LinkedList<String> nombres = new LinkedList<>();
-        for (Objetivo objetivo: Perfil.objetivos) {
-            nombres.add(objetivo.getNombre());
-        }
-        return nombres;
+    public static LinkedList<Objetivo> getObjetivos() {
+        return Perfil.objetivos;
     }
 
+    public static void agregarActividad(Actividad nuevaActividad) {
+        Perfil.actividades.add(nuevaActividad);
+    }
 }
