@@ -7,9 +7,14 @@ package com.example.nfc.tdp1_app_prueba;
 public class Actividad {
 
     private String nombre;
+    private boolean estaCompletada;
 
     public Actividad(String nombre) {
         this.nombre = nombre;
+        this.estaCompletada = false;
     }
 
+    public boolean estaCompletada() {
+        return this.estaCompletada;
+    }
 }
