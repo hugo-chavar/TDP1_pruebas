@@ -30,8 +30,7 @@ public class Objetivo {
 
 
     public float getProgreso() {
-        //5 solo para probarlo
-        float actividadesCompletadas = 5;
+        float actividadesCompletadas = 0;
         if (this.tieneActividades()) {
             for (Actividad actividad : this.actividades) {
                 if (actividad.estaCompletada()) {
