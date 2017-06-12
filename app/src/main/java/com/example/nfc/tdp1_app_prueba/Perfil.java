@@ -24,4 +24,14 @@ public class Perfil {
     }
 
 
+    public static LinkedList<Actividad> getActividadesPendientes() {
+        //Se podria tener dos listas separadas de actividades pendientes y completadas, usando un Observer para moverlas de una lista a la otra
+        LinkedList<Actividad> actividadesPendientes = new LinkedList<>();
+        for (Actividad actividad: Perfil.actividades) {
+            if (!actividad.estaCompletada()) {
+                actividadesPendientes.add(actividad);
+            }
+        }
+        return actividadesPendientes;
+    }
 }
