@@ -17,4 +17,12 @@ public class Actividad {
     public boolean estaCompletada() {
         return this.estaCompletada;
     }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void completar() {
+        this.estaCompletada = true;
+    }
 }
