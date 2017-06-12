@@ -76,16 +76,31 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/ver_actividades_button"
+        android:id="@+id/ver_estadisticas_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ver Actividades"
         android:onClick="irAVerActividades"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="74dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.88" />
+
+    <Button
+        android:id="@+id/ver_actividades_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Estadisticas"
+        android:onClick="irAVerEstadisticas"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="74dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.036" />
 
 </android.support.constraint.ConstraintLayout>

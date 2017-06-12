@@ -19,7 +19,8 @@
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".AgregarActividadActivity" />
         <activity android:name=".VerObjetivosActivity" />
-        <activity android:name=".VerActividadesActivity"></activity>
+        <activity android:name=".VerActividadesActivity" />
+        <activity android:name=".GraficoEjemploActivity"></activity>
     </application>
 
 </manifest>

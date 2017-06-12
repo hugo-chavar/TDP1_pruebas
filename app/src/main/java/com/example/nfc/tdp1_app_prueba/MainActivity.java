@@ -47,4 +47,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void irAVerEstadisticas(View view) {
+        Intent intent = new Intent(this, GraficoEjemploActivity.class);
+        startActivity(intent);
+    }
+
 }
