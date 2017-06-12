@@ -42,4 +42,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void irAVerActividades(View view) {
+        Intent intent = new Intent(this, VerActividadesActivity.class);
+        startActivity(intent);
+    }
+
 }
