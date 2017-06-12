@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -32,26 +33,40 @@ public class VerActividadesActivity extends AppCompatActivity implements View.On
     }
 
     private void mostrarDatosActividad(Actividad actividad, ViewGroup layout) {
+
         TextView datosActividad = new TextView(this);
         datosActividad.setTextSize(20);
         String nombreActividad = actividad.getNombre();
         datosActividad.setText(nombreActividad);
-        layout.addView(datosActividad);
 
         Button botonCompletarActividad = new Button(this);
         botonCompletarActividad.setText("Completar " + nombreActividad);
-
         this.botonesDeActividades.put(botonCompletarActividad, actividad);
         //Cuando un boton se aprieta, se llama a la funcion onClick de esta clase
         botonCompletarActividad.setOnClickListener(this);
+
+
+        //Creo que con ListView se podria conseguir algo parecido y mejor organizado, no se, pero por ahora lo dejo asi para probarlo
+        LinearLayout grupoDatosActividad = new LinearLayout(this);
+        grupoDatosActividad.setOrientation(LinearLayout.VERTICAL);
+        grupoDatosActividad.addView(datosActividad);
+        grupoDatosActividad.addView(botonCompletarActividad);
+        /*
+        layout.addView(datosActividad);
         layout.addView(botonCompletarActividad);
+        */
+        layout.addView(grupoDatosActividad);
     }
 
 
 
     @Override
-    public void onClick(View view) {
-        Actividad actividadACompletar = this.botonesDeActividades.get((Button)view);
+    public void onClick(View botonCompletarActividad) {
+        Actividad actividadACompletar = this.botonesDeActividades.get((Button)botonCompletarActividad);
         actividadACompletar.completar();
+
+        //Quiero que cuanndo se haga click en completar se remueva la actividad del layout
+        ViewGroup grupoDatosActividad = ((ViewGroup)botonCompletarActividad.getParent());
+        ((ViewGroup)grupoDatosActividad.getParent()).removeView(grupoDatosActividad);
     }
 }
