@@ -1,9 +1,11 @@
 package com.example.nfc.tdp1_app_prueba;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -13,9 +15,12 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VerActividadesActivity extends AppCompatActivity implements View.OnClickListener {
+public class VerActividadesActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private Map<Button, Actividad> botonesDeActividades = new HashMap<>();
+
+
+    private String[] elementosDeLaLista = {"Objetivos", "Estadisticas"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +29,14 @@ public class VerActividadesActivity extends AppCompatActivity implements View.On
 
         this.mostrarActividades();
 
+        this.cargarElementosAlDrawerList();
+    }
 
+    private void cargarElementosAlDrawerList() {
         ListView mDrawerList = (ListView) findViewById(R.id.navList);
-        String[] elementosDeLaLista = {"Elem1", "Elem2", "Elem3"};
-        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, elementosDeLaLista);
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, elementosDeLaLista);
         mDrawerList.setAdapter(mAdapter);
+        mDrawerList.setOnItemClickListener(this);
     }
 
     private void mostrarActividades() {
@@ -76,5 +84,19 @@ public class VerActividadesActivity extends AppCompatActivity implements View.On
         //Quiero que cuanndo se haga click en completar se remueva la actividad del layout
         ViewGroup grupoDatosActividad = ((ViewGroup)botonCompletarActividad.getParent());
         ((ViewGroup)grupoDatosActividad.getParent()).removeView(grupoDatosActividad);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String elementoSeleccionado = elementosDeLaLista[position];
+
+        if (elementoSeleccionado.equals("Objetivos")) {
+            Intent intent = new Intent(this, VerObjetivosActivity.class);
+            startActivity(intent);
+        }
+        if (elementoSeleccionado.equals("Estadisticas")) {
+            Intent intent = new Intent(this, GraficoEjemploActivity.class);
+            startActivity(intent);
+        }
     }
 }
