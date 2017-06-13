@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -21,6 +23,12 @@ public class VerActividadesActivity extends AppCompatActivity implements View.On
         setContentView(R.layout.activity_ver_actividades);
 
         this.mostrarActividades();
+
+
+        ListView mDrawerList = (ListView) findViewById(R.id.navList);
+        String[] elementosDeLaLista = {"Elem1", "Elem2", "Elem3"};
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, elementosDeLaLista);
+        mDrawerList.setAdapter(mAdapter);
     }
 
     private void mostrarActividades() {
